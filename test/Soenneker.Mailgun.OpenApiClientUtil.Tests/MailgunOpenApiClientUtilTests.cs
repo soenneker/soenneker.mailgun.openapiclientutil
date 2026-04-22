@@ -1,20 +1,19 @@
 using Soenneker.Mailgun.OpenApiClientUtil.Abstract;
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Mailgun.OpenApiClientUtil.Tests;
 
-[Collection("Collection")]
-public sealed class MailgunOpenApiClientUtilTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class MailgunOpenApiClientUtilTests : HostedUnitTest
 {
     private readonly IMailgunOpenApiClientUtil _openapiclientutil;
 
-    public MailgunOpenApiClientUtilTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public MailgunOpenApiClientUtilTests(Host host) : base(host)
     {
         _openapiclientutil = Resolve<IMailgunOpenApiClientUtil>(true);
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
