@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 namespace Soenneker.Mailgun.OpenApiClientUtil.Abstract;
 
 /// <summary>
-/// Exposes a cached OpenAPI client instance.
+/// Provides a cached Mailgun OpenAPI client that uses the configured Mailgun HTTP client.
 /// </summary>
-public interface IMailgunOpenApiClientUtil: IDisposable, IAsyncDisposable
+public interface IMailgunOpenApiClientUtil : IDisposable, IAsyncDisposable
 {
     /// <summary>
-    /// Gets the value.
+    /// Gets the cached Mailgun client, creating it on the first call.
     /// </summary>
     /// <param name="cancellationToken">The cancellation token.</param>
     /// <returns>A task containing the result of the operation.</returns>
