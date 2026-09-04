@@ -11,6 +11,7 @@ using Soenneker.Utils.AsyncSingleton;
 
 namespace Soenneker.Mailgun.OpenApiClientUtil;
 
+/// <inheritdoc cref="IMailgunOpenApiClientUtil" />
 public sealed class MailgunOpenApiClientUtil : IMailgunOpenApiClientUtil
 {
     private readonly AsyncSingleton<MailgunOpenApiClient> _client;
