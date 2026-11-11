@@ -44,7 +44,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.Mailgun.HttpClients" Version="11.0.170" />
+        <PackageReference Include="Soenneker.Mailgun.HttpClients" Version="11.0.173" />
         <PackageReference Include="Soenneker.Mailgun.OpenApiClient" Version="11.0.85" />
     </ItemGroup>
 </Project>
